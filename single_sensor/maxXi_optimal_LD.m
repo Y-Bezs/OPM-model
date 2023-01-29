@@ -15,7 +15,10 @@
 %More details in paper:
 %https://doi.org/10.1016/j.neuroimage.2022.119747.
 %
-%Author Yulia Bezsudnova
+% Author Yulia Bezsudnova
+% yxb968@student.bham.ac.uk
+
+
 %% parameters
 
 Lstrart=2/1000;

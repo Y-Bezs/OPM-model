@@ -11,6 +11,7 @@
 %
 %More comments in *intrinsic_sens_nmor.m*
 % Author Yulia Bezsudnova
+% yxb968@student.bham.ac.uk
 
 %% parameters of the model
 Lstrart=2/1000; % Length of cell

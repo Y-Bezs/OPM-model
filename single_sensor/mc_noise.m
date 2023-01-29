@@ -1,4 +1,4 @@
-%%mc_noise(n) calculates magnetic field from 1000 ECD representing brain
+%%mc_noise(n) calculates magnetic field from randomly distributed 1000 ECD representing brain
 %%noise at the odd/even
 %%points of the biggest cell
 % 

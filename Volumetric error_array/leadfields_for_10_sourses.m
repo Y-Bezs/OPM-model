@@ -16,9 +16,6 @@
 % yxb968@student.bham.ac.uk
 function sourse_all(Ns)
 
-raw_folder = '/rds/projects/j/jenseno-opm/to_server/input';
-addpath /rds/projects/j/jenseno-opm/fieldtrip-20200331
-%% 
 load ('dipoles.mat')
 load ('nrm_dip.mat')
 load ('chanori.mat') %to synchronize location fluctuation for brain noise and ECD

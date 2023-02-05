@@ -68,9 +68,9 @@ for sori=1:1:10
     source_all_tr=[];
     br_noise_trial=[];
     env_noise=100*10^(-15);
-    for i=1:1:49
-        for j=2:1:16
-            
+    
+    for i=1:1:49 % length of the cell
+        for j=2:1:16 % width of the ECD       
             env_noise_trial=[];
             intr_noise_trial=[];
             br_noise_trial=[];
@@ -81,7 +81,7 @@ for sori=1:1:10
                 for tt=1:20
                     br_noise_trial{1,1}(jj,tt)=(br_noise_all{rand_noise(tt),jj}(i,j-1)/5); % random 20 different brain noises
                 end
-                source_all_tr{1,1}(jj,:)=repmat(source_all{jj,mc}(i,j-1),1,20);
+                source_all_tr{1,1}(jj,:)=repmat(source_all{jj,mc}(i,j-1),1,20); % signal from ECD
             end 
             % construct trial
             data.trial{1,1} = source_all_tr{1,1}+intr_noise_trial{1,1}...
@@ -92,7 +92,6 @@ for sori=1:1:10
 
          
         clear opm 
-
         opm=opmSens(j/1000,(i+1)/1000,j*j,i+1,chanpos,elecori);
         opm.unit='m';
         opm.tra=opm.tra./(j*j*(i+1)); 
@@ -115,8 +114,8 @@ for sori=1:1:10
 
 end
 
-    save(['loc1_nmor_20av_ne_100_'  num2str(mc)], 'loc1');
-    save(['loc2_nmor_20av_ne_100_'  num2str(mc)], 'loc2');
-    save(['loc3_nmor_20av_ne_100_'  num2str(mc)], 'loc3'); 
+    save(['loc1_nmor_20av_ne_' num2str(env_noise*1e15) '_'  num2str(mc)], 'loc1');
+    save(['loc2_nmor_20av_ne_' num2str(env_noise*1e15) '_'  num2str(mc)], 'loc2');
+    save(['loc3_nmor_20av_ne_' num2str(env_noise*1e15) '_'  num2str(mc)], 'loc3'); 
 end
 

@@ -55,23 +55,8 @@ for ns=1:1:13 %monte-carlo iterations
     
     dist=93/1000; % distance of the array sphere to the center of the head
     
-    temp=size(pos);
-    loc_fluct_xy=(rand(temp(1),2,1)-0.5).*0.01; % add xy shift to locations of each sensors
-    loc_fluct_z=rand(temp(1),1,1)*0.004; % add y hift to locations of each sensors
-    loc_fluct=[loc_fluct_xy loc_fluct_z];
-    chanpos1=pos*dist+loc_fluct;
+    [chanpos1,newori]=placement_fluct(chanpos) %introdusing fluctuation in sensor positions
 
-    tmp=vecnorm(chanpos1');
-    for kl=1:1:temp(1)
-        newori(kl,:)=chanpos1(kl,:)/tmp(kl);
-    end
-    ori_fluct_xyz=(rand(temp(1),3,1)-0.5).*2*0.155; % add random tilt to the orientations of the axis
-    newori1=newori+ori_fluct_xyz;
-
-    tmp=vecnorm(newori1');
-    for kl=1:1:temp(1)
-        newori2(kl,:)= newori1(kl,:)/tmp(kl);
-    end
     
     % create the array of sensors with the biggest cells (even points)     
     clear opm 

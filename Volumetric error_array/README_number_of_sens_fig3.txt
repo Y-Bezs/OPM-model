@@ -5,7 +5,5 @@ Steps:
 
 NOTE: sourses lf take from SIGMA calculations
 
-2)to calculate volumetric error
-	run number_sensors_20_av_NMOR
 
 calculations for SERF requires the same steps

@@ -59,10 +59,7 @@ cfg.numtrl = 1;
 raw = ft_dipolesimulation(cfg);
 data=raw;
 
-
-
-  
- %%  
+env_noise=100*10^(-15); % level of residual enviromental noise
 
 for sori=1:1:10   
     load(['source_' num2str(sori)])
@@ -71,21 +68,18 @@ for sori=1:1:10
     Response_sens=[];
     source_all_tr=[];
     br_noise_trial=[];
-    env_noise=100*10^(-15);
-    for i=1:1:49
-        for j=2:1:16
-                       
-            
+    
+    for i=1:1:49 % length of the cell
+        for j=2:1:16 % width of the cell        
             env_noise_trial=[];           
-            env_noise_trial=randn(size(chanpos,1),1)*env_noise;
-            
+            env_noise_trial=randn(size(chanpos,1),1)*env_noise;  % create residual enviromental noise           
             intr_noise_trial=[];
-            intr_noise_trial=randn(size(chanpos,1),1)*(dB_i(i,j-1)*5);
+            intr_noise_trial=randn(size(chanpos,1),1)*(dB_i(i,j-1)*5);  % creating intrinsic noise
             source_all_tr=[];
             br_noise_trial=[];
             for jj=1:1:size(chanpos,1)        
-                br_noise_trial(jj,1) = br_noise_all{mc,jj}(i,j-1)/5 ; 
-                source_all_tr(jj,1)=source_all{jj,mc}(i,j-1);
+                br_noise_trial(jj,1) = br_noise_all{mc,jj}(i,j-1)/5 ;  % brain noise
+                source_all_tr(jj,1)=source_all{jj,mc}(i,j-1);  % signal from ECD
             end
              
             
@@ -121,8 +115,8 @@ for sori=1:1:10
 
 end
 
-    save(['loc1_nmor_ss_ne_100_'  num2str(mc)], 'loc1');
-    save(['loc2_nmor_ss_ne_100_'  num2str(mc)], 'loc2');
-    save(['loc3_nmor_ss_ne_100_'  num2str(mc)], 'loc3'); 
+    save(['loc1_nmor_ss_ne_' num2str(env_noise*1e15) '_' num2str(mc)], 'loc1');
+    save(['loc2_nmor_ss_ne_' num2str(env_noise*1e15) '_'  num2str(mc)], 'loc2');
+    save(['loc3_nmor_ss_ne_' num2str(env_noise*1e15) '_'  num2str(mc)], 'loc3'); 
 end
 

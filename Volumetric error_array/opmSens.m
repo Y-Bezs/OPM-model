@@ -1,15 +1,33 @@
 %% opmSens 
-% Create a cloud of points that represents a cell with length L(Nz number of points) 
-% width D(Nxy number of points in a cross-section DxD) 
-% Cell sensing axis is ori,
-% location of the cell center point (center of the cross-ssection closer to the head) - loc  
+% 
+%  opmSens that creates a cloud of points to represent a cell with a specified length, width, and location.
+% The function takes in several input arguments:
+
+% R: the radius of the cell
+% L: the length of the cell, in number of points
+% Nxy: the number of points in a cross-section of the cell
+% Nz: the number of points along the length of the cell
+% pos: a 3-element vector that specifies the location of the cell center point
+% ori: a 3-element vector that specifies the sensing axis of the cell
+%
+% The function returns an output structure called opmSens, which contains information about the cell's position, orientation, and labels for each point in the cloud. The output structure has the following fields:
+
+% coilpos: an Nx3 matrix that contains the x, y, and z coordinates of each point in the cloud
+% coilori: an Nx3 matrix that contains the x, y, and z components of the sensing axis at each point in the cloud
+% tra: a 1xN vector that contains the location of each point in the cloud, relative to the cell center
+% unit: a string that specifies the unit of measurement for the coordinates (in this case, 'm')
+% label: a cell array of strings that contains a label for each point in the cloud (in this case, 'OPM001', 'OPM002', etc.)
+% chanunit: a cell array of strings that specifies the unit of measurement for each channel (in this case, 'T')
+% chantype: a cell array of strings that specifies the channel type (in this case, 'megmag')
+% chanpos: an Nx3 matrix that contains the x, y, and z coordinates of each channel in the cloud
+% chanori: an Nx3 matrix that contains the x, y, and z components of the sensing axis at each channel in the cloud.  
 % 
 %
 % OUTPUT:
 %  location of points that represents a cell.
 %
-%Note: averaging magnetic field around these points yeilds the sensor's
-%response
+% Note: opmSens output structure contains all the information necessary to model the response of a sensor 
+% that is located near the cloud of points.
 %
 %More details in paper:
 %https://doi.org/10.1016/j.neuroimage.2022.119747.

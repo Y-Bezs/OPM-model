@@ -1,11 +1,16 @@
 % function number_sensors_1av_NMOR.m
 %
+%function that takes as input the number of sensors in the array and outputs the reconstructed x, y, z coordinates of the sources for 100 brain noise sets.
+%
 % OUTPUT:
 %  loc1/2/3 - x,y,z location of the reconstructed sources(1x10 cells) each
 %  cell includes result for 100 brain noise sets for particular number of sensors in array (Nsens) 
 %  For av=1 type of experiment
 %
-%
+% The code loads precalculated data for brain noise and dipole positions, 
+% calculates the ideal sensor positions based on the number of sensors, 
+% creates trial data by reconstructing dipole position and adding noise, 
+% and then reconstructs the dipole location
 % More details in paper:
 % https://doi.org/10.1016/j.neuroimage.2022.119747.
 %

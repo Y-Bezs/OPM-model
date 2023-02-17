@@ -1,4 +1,4 @@
-# OPM-model
+# OPM-MEG system in realistic conditions 
 # This code was used to calulating results for the paper 
 #
 # Optimising the sensing volume of OPM sensors for MEG source reconstruction

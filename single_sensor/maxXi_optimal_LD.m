@@ -1,5 +1,7 @@
-%%maxXi_optimal_LD calculates the maximum Xi scanning through all possible
-%%LxD as a function of residual noise and depth of the dipole (Fig.2)
+%%maxXi_optimal_LD 
+% calculates the optimal dipole length, dipole width, and Xi as a function of residual noise and depth of the dipole. 
+% The calculation includes results from calculating brain noise and ECD signal for each cell dimension. 
+% The optimal values are calculated by scanning through all possible LxD combinations and finding the maximum Xie (Fig.2)
 %
 % 
 %
@@ -11,6 +13,11 @@
 %
 %Note: the calculatuion include results from calculation brain noise (eq.5) and ECD signal (eq.6) for
 %each cell dimention 
+%
+% The code first sets some parameters for the L and W values. 
+% Then, it loads data for the ECD signal and brain noise for each cell size. 
+% It constructs signals for each cell size from values for points of clouds representing the biggest cell.
+%
 %
 %More details in paper:
 %https://doi.org/10.1016/j.neuroimage.2022.119747.

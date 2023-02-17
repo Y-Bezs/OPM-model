@@ -3,6 +3,7 @@
 %%brain noise at the odd/even points of the biggest cells in
 %%the array of 69 sensors
 % 
+% The function takes one input parameter mc which represents the Monte Carlo iteration.
 %
 % OUTPUT:
 %  mc_noise(n) - magnetic field from ECD at the specific ponts from the

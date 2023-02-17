@@ -29,7 +29,7 @@ load('phi_whole.mat') %angle for maximazing signal for each ECD depth
 %Source
 a0=80/1000; % r-position of ECD
 %phi=0.1222;
-phi=0.0022;
+phi=0.0022; % starting
 source.pos=[a0*cos(phi),a0*sin(phi),0];
 source.ori=[0,0,1];
 source.amp=10*10^(-9);

@@ -3,6 +3,14 @@
 % output dB_i - the values of intrinsic noise for NMOR as a function of
 % length and width (LxW) of the vapour cell
 %
+% The main steps of the code are:
+%
+% 1. Define the range of lengths and widths of the cell to explore.
+% 2. Calculate the spin-exchange, wall collision, and light-induced relaxation rates, and from them, the width of the resonance.
+% 3. Calculate the atomic-shot noise and photon-shot noise.
+% 4. Calculate the intrinsic sensitivity as the square root of the sum of the atomic-shot and photon-shot noises.
+% 5. Plot the intrinsic noise as a function of the length and width of the cell.
+%
 %Note: one can explore dB_i as a fuction of any parameter in the model in
 %similar way it's done here for cell volume (LxW)
 %

@@ -12,3 +12,9 @@ Steps:
 		-run intrinsic_noise_nmor
 4) To calculaate SNR for optimal length and width
 		-run maxXi_optimal_LD
+		
+The details of this pipeline can be found in the referenced paper.
+https://doi.org/10.1016/j.neuroimage.2022.119747.
+%
+% Author Yulia Bezsudnova
+% yxb968@student.bham.ac.uk

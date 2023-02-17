@@ -7,7 +7,9 @@
 %  loc1/2/3 - x,y,z location of the reconstructed sources(1x10 cells) each
 %  cell includes result for all cell sizes
 %  
-%
+%frw_inv_1av_nmor performs a source localization analysis using a single dipole model. 
+%It reconstructs the position of 10 different source dipoles given 100 different brain noises. 
+%The function takes in one input argument mc which is an integer specifying the number of the brain noise realization.
 %
 %More details in paper:
 %https://doi.org/10.1016/j.neuroimage.2022.119747.

@@ -1,5 +1,5 @@
-%%Responce_even(n) calculates Signal(magnetic field) from ECD at the odd
-%%points of the biggest cell
+%%Responce_even(n) 
+% calculates the magnetic field from ECD at the odd points(cross-section) of the biggest cell
 % 
 %
 % OUTPUT:
@@ -9,11 +9,15 @@
 %Note: the calculatuion include value of optimal angle between
 %sensor-center of sphere-ECD
 %
+% Then, for each depth between 5cm and 8cm, 
+% the function creates a new ECD with the same orientation and amplitude but with a position at the specified depth, 
+% and calculates the leadfield for a sensor cloud ("Sensor") of even points representing the sensor. 
+%
 %More details in paper:
 %https://doi.org/10.1016/j.neuroimage.2022.119747.
 %
 %Author Yulia Bezsudnova
-function Responce_even(n)
+function Responce_even()
 
 lf=[];
 lf_prep=[];

@@ -11,4 +11,6 @@
 #   Calculation for single sensors
 #   Calculations for array of sensors
 #
+#  All computations are performed using the FieldTrip toolbox (Oostenveld et al., 2011) and custom MATLAB scripts (R2019b, Mathworks, USA)
+#
 # If you have any quiestions contact Yulia Bezsudnova yxb968@student.bham.ac.uk

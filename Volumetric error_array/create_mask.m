@@ -1,3 +1,4 @@
+% creates masks to extract smaller-size sensors array from the araay with biggest cell
 function create_mask(ns)
 
 raw_folder = '/rds/projects/j/jenseno-opm/to_server/input';

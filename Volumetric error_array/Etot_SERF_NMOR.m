@@ -4,7 +4,10 @@
 %  answer_full - 49x15 array of Etot for each cell sizes / the ability of the array to reconstruct the 
 %  temporal waveform of a dipolar source using a beamformer analysis   
 %  
-%
+% The function iterates through different cell sizes to create simulated brain signals with intrinsic noise, brain noise, and environmental noise. 
+% The function calculates the covariance matrices for each noise source and combines them to obtain the total covariance matrix. 
+% The beamforming analysis is then performed using the total covariance matrix and the simulated brain signals to obtain a reconstructed signal. 
+% The total reconstruction error is calculated as the root-mean-square difference between the reconstructed signal and the original signal.
 %
 % More details in paper:
 % https://doi.org/10.1016/j.neuroimage.2022.119747.

@@ -1,10 +1,14 @@
-%%Responce_odd(n) calculates Signal(magnetic field) from ECD at the odd
-%%points of the biggest cell
+%%Responce_odd(n) 
+% calculates magnetic field from ECD at the odd points(cross-section) of the biggest cell
 % 
 %
 % OUTPUT:
-%  Response_odd - magnetic field from ECD at the sspecific ponts from the
+%  Response_odd - magnetic field from ECD at the specific ponts from the
 %  cloud of points representing sensor
+%
+% for each depth between 5 cm and 8 cm, 
+% the function creates a new ECD with the same orientation and amplitude but with a position at the specified depth, 
+% and calculates the leadfield for a sensor cloud ("Sensor") of even points representing the sensor.
 %
 %Note: the calculatuion include value of optimal angle between
 %sensor-center of sphere-ECD
@@ -14,7 +18,7 @@
 %
 %Author Yulia Bezsudnova
 
-function Responce_odd(n)
+function Responce_odd()
 
 lf=[];
 lf_prep=[];
